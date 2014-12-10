@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-control" content="private, max-age=86400">
+    
+    <title>AEH Creative | UX/UI Designer</title>
+
+    <meta name="description" content="Home of UX/UI Designer Arturo Herrero.">
+    <meta name="author" content="AEH Creative">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+</head>
+
+<body>
+<div class="hidden" data-scroll-goto="0">^</div>
+<div>
+    
+  <header class="clear">
+   
+   <nav class="mobileNav">
+        <ul>
+          <li>
+            <a data-scroll-nav="1" href="#portfolio">Portfolio</a>
+            <a data-scroll-nav="2" href="#about-me">About</a>
+            <a data-scroll-nav="3">Get In Touch</a>
+          </li>
+        </ul>
+    </nav>
+   
+    <div class="wrapper">
+      
+      <h1 class="logo"><a data-scroll-nav="0"><img src="images/logo.png" alt="AEH Creative"></a></h1>
+      
+      <nav>
+        <ul>
+          <li>
+            <a data-scroll-nav="1">Portfolio</a>
+            <a data-scroll-nav="2">About</a>
+            <a data-scroll-nav="3">Get In Touch</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <button class="navTrigger"><img src="images/nav.svg" alt=""></button>
+
+    </div>
+  </header>
+
+  <section id="feature" data-scroll-index="0">
+    <div class="wrapper">
+      <article><img src="images/coup-website.png"></article>
+    </div>
+  </section>
+
+  <section  id="portfolio">
+    <div class="wrapper-full" data-scroll-index="1">
+      <article>
+        <h2>Cycle Works</h2>
+        <span class="overlay"></span>
+        <img src="images/cycleworks.jpg" alt="" class="">
+      </article>
+      
+      <article>
+        <h2>Coup Apparel</h2>
+        <span class="overlay"></span>
+        <img src="images/coup-cover.jpg" alt="" class="">
+      </article>
+      
+      <article>
+        <h2>Salt &amp; Light Clothing Co.</h2>
+        <span class="overlay"></span>
+        <img src="images/salt-light-cover.jpg" alt="" class="">
+      </article>
+      
+      <article>
+        <h2>Prodigy Properties</h2>
+        <span class="overlay"></span>
+        <img src="images/produgy-cover.jpg" alt="" class="">
+      </article>
+
+      <article>
+        <h2>Unit 1</h2>
+        <span class="overlay"></span>
+        <img src="images/unit1.jpg" alt="" class="">
+      </article>
+
+      <article>
+        <h2>Misc. UI</h2>
+        <span class="overlay"></span>
+        <img src="images/ui1.jpg" alt="" class="">
+      </article>
+    </div>
+  </section>
+
+  <section id="about-me" data-scroll-index="2">
+    <img src="images/me.png">
+
+    <div class="about">
+    	<h1>Hi, im arturo.</h1>
+    	<p> I specialize in User Interface Design, User Experience and Front-End Development. I have alway found these three disciplines very tightly wound together in my career. Being told countless times to stay in my lane (Designer) i've had to fight to educate myself on all three in order to become a more well rounded creative. Having this Visual, Experiential and Technical knowledge helps me see the bigger picture when working on a project. One of my mentors once told me "Understanding the medium and user you design for, knowing one without the other is setting yourself up for failure". </p>
+    	
+    	<br>
+    	
+    	<p>When im not Designing or coding I like to spend time with my family. I have a beautiful wife Monique and twin boys Arthur &amp; Alex. I enjoy the outdoors, phtography and film.</p>
+	
+
+	    <h2>Lets Connect</h2>
+	    <ul>
+	    	<li><a target="_blank" href="https://twitter.com/aeh_creative" class="twitter">Twitter</a></li>
+	    	<li><a target="_blank" href="https://dribbble.com/arturo_herrero" class="dribbble">Dribbble</a></li>
+	    	<li><a target="_blank" href="https://www.behance.net/arthurherrero" class="behance">Behance</a></li>
+	    </ul>
+    </div>
+  </section>
+
+  <section id="get-started" data-scroll-index="3">
+    <h3>Lets chat!</h3>
+    <p>Lets grab some coffee, lunch or even a beer! Im excited to hear about your next big idea and how we can work together to make it happen.</p>
+    <button><a target="_blank" href="mailto:arturo@aehcreative.com">Get In Touch</a></button>
+  </section>
+
+  <footer>
+  	<h1 class="logo"><a href="index.html"><img src="images/logo.png"></a></h1>
+  	<p>Copyright &copy; 2014. All All images and work belong to and are reserved by AEH Creative Services, Inc.</p>
+  </footer>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script src="js/scrollIt.js" type="text/javascript"></script>
+<script>
+	$(function() {
+	//caches a jQuery object containing the header element
+	var header = $(".clear");
+	  $(window).scroll(function() {
+	      var scroll = $(window).scrollTop();
+
+	      if (scroll >= 120) {
+	          header.removeClass("clear").addClass("scrolled");
+	      } else {
+	          header.removeClass("scrolled").addClass("clear");
+	      }
+	  });
+	});
+
+	$(function() {
+	//caches a jQuery object containing the header element
+	var btt = $(".hidden");
+	  $(window).scroll(function() {
+	      var scroll = $(window).scrollTop();
+
+	      if (scroll >= 1625) {
+	          btt.removeClass("hidden").addClass("visable");
+	      } else {
+	          btt.removeClass("visable").addClass("hidden");
+	      }
+	  });
+	});
+    
+    $(function(){ 
+      $('.navTrigger').click(function(e){
+          e.stopPropagation();
+          $('.mobileNav').fadeToggle();
+      });
+
+      $('.mobileNav').click(function(e){
+          e.stopPropagation();
+          $('.mobileNav').fadeToggle();
+      });
+
+      $(document).click(function(){
+          $('.mobileNav').fadeOut();
+      });
+    });
+    
+    $(function(){
+        $.scrollIt({
+            upKey: 38,             // key code to navigate to the next section
+            downKey: 40,           // key code to navigate to the previous section
+            easing: 'linear',      // the easing function for animation
+            scrollTime: 600,       // how long (in ms) the animation takes
+            activeClass: 'active', // class given to the active nav element
+            onPageChange: null,    // function(pageIndex) that is called when page is changed
+            topOffset: -100           // offste (in px) for fixed top navigation
+        });
+    });
+    
+</script>
+
+</body>
+</html>

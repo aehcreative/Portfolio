@@ -1,0 +1,643 @@
+/*--- Blue: #0c669f ---*/
+/*--- Blue: 12,102,159,0.9 ---*/
+
+/*--- Teal: #0c9f8f ---*/
+/*--- Teal: 12,159,143,0.9 ---*/
+
+/*--- Yellow: #e2bb21 ---*/
+/*--- Yellow: 226,187,33,0.9 ---*/
+
+/*--- Light Blue: #5bb6d4 ---*/
+/*--- Light Blue: 91,182,212,0.9 ---*/
+
+/*--- Purple: #693fd3 ---*/
+/*--- Purple: 105,63,211,0.9 ---*/
+
+/*--- Red: #e33030 ---*/
+/*--- Red: 227,48,48,0.9 ---*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  float: left;
+  padding: 0 5%;
+}
+
+.wrapper-full {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+}
+
+section {
+
+}
+
+.hidden, .visable {
+    display: inline;
+    font-family: 'Quicksand', sans-serif;
+    width: 70px;
+    height: 13px;
+    position: fixed;
+    background: rgba(0,0,0,.0);
+    color: #fff;
+    bottom: 0px;
+    text-align: center;
+    margin: 0 47.9%;
+    padding: 14px 0;
+    z-index: 100;
+    visibility: hidden;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+
+  -webkit-transition: all 0.2s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+   -moz-transition: all 0.2s ease-out;  /* Firefox 4-15 */
+     -o-transition: all 0.2s ease-out;  /* Opera 10.50–12.00 */
+        transition: all 0.2s ease-out;
+        font-size: 60px;
+        line-height: 54px;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+.visable {
+  background: rgba(0,0,0,.8);
+  visibility: visible;
+  
+  -webkit-transition: all 0.2s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+   -moz-transition: all 0.2s ease-out;  /* Firefox 4-15 */
+     -o-transition: all 0.2s ease-out;  /* Opera 10.50–12.00 */
+        transition: all 0.2s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+
+/*--- Header Styles ---*/
+
+header {
+  position: fixed;
+  height: 30px;
+  width: 100%;
+  background: rgb(20,20,20);
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 35px 0;
+  z-index: 200;
+
+  -webkit-transition: background 0.2s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: background 0.2s ease-out;  /* Firefox 4-15 */
+       -o-transition: background 0.2s ease-out;  /* Opera 10.50–12.00 */
+          transition: background 0.2s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+header.clear {
+  background: rgba(255,126,0,0);
+}
+
+header h1 {
+  float: left;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  width: auto;
+  margin: -21px 0 0;
+}
+
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+
+  -webkit-transition: color 0.2s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: color 0.2s ease-out;  /* Firefox 4-15 */
+       -o-transition: color 0.2s ease-out;  /* Opera 10.50–12.00 */
+          transition: color 0.2s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+header nav {
+  visibility: visible;
+  display: block;
+  float: right;
+  width: 75%;
+  text-align: right;
+  height: 30px;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 30px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 30px;
+  letter-spacing: 4px;
+  padding: 15px 0;
+  border-bottom: 2px solid rgba(255,255,255,0);
+  cursor: pointer;
+
+  -webkit-transition: border 0.2s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: border 0.2s ease-out;  /* Firefox 4-15 */
+       -o-transition: border 0.2s ease-out;  /* Opera 10.50–12.00 */
+          transition: border 0.2s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+header nav a.active {
+  border-bottom: 2px solid rgba(255,255,255,1);
+}
+
+header.clear nav a:hover {
+  border-bottom: 2px solid rgba(255,255,255,1);
+}
+
+header.scrolled nav a:hover {
+  border-bottom: 2px solid rgba(255,255,255,1);
+}
+
+header nav a img {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  margin: -9px 0;
+}
+
+/*--- Mobile Nav ---*/
+
+header .mobileNav, header .navTrigger {
+    visibility: hidden;
+    display: none;
+}
+
+header .navTrigger {
+    float: right;
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    margin: 30px 0;
+}
+
+header .mobileNav {
+    background: rgba(20,20,20,.9);
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    position: absolute;
+    top: 100px;
+}
+
+header .mobileNav ul li a {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    font-size: 32px;
+}
+
+/*--- Universal Styles ---*/
+
+section#feature, section#portfolio {
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #fff;
+}
+
+/*--- Feature Styles ---*/
+
+section#feature {
+  height: 650px;
+  background: #15a9b7;
+  z-index: 0;
+}
+
+section#feature article {
+  width: 100%;
+  max-width: 1233px;
+  margin: 0 auto;
+  height: 650px;
+  overflow: hidden;;
+}
+
+section#feature article img {
+  width: 100%;
+  position: relative;
+  top: 140px;
+}
+
+/*--- Portfolio Styles ---*/
+
+section#portfolio {
+  background: #333;
+  z-index: 99;
+}
+
+section#portfolio article {
+  position: relative;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  float: left;
+  overflow: hidden;
+}
+
+section#portfolio article .overlay {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 10;
+
+  -webkit-transition: all 0.2s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: all 0.2s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;  /* Opera 10.50–12.00 */  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */  
+}
+
+section#portfolio article:hover .overlay {
+  background: rgba(0,0,0,0.7);
+}
+
+section#portfolio article:hover h2 {
+  opacity: 1;
+}
+
+section#portfolio article h2 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 33px;
+  font-size: 26px;
+  margin: -16.5px 0 0 0;
+  z-index: 100;
+  height: 33px;
+  top: 50%;
+  color: #fff;
+  opacity: 0;
+    
+  -webkit-transition: all 0.2s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: all 0.2s ease-out;  /* Firefox 4-15 */
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;  /* Opera 10.50–12.00 */  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */  
+}
+
+
+section#portfolio article img {
+  width: 100%;
+  float: left;
+  z-index: 9;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+   -moz-transition: all 0.2s ease-out;  /* Firefox 4-15 */
+     -o-transition: all 0.2s ease-out;  /* Opera 10.50–12.00 */
+        transition: all 0.2s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */  
+}
+
+/*
+.blue { background: rgba(12,102,159,0.9); }
+.teal { background: rgba(12,159,143,0.9); }
+.yellow { background: rgba(226,187,33,0.9); }
+.light-blue { background: rgba(91,182,212,0.9); }
+.purple { background: rgba(105,63,211,0.9); }
+.red { background: rgba(227,48,48,0.9); }
+.white { background: rgba(255,255,255,0.9); }
+*/
+
+
+/*--- About Me Styles ---*/
+
+section#about-me {
+  background: #a3a3a2;
+  height: auto;
+  float: left;
+  position: relative;
+}
+
+section#about-me img {
+  position: absolute;
+  bottom: 0px;
+  width: 31%;
+  max-width: 404px;
+    z-index: 199    ;
+} 
+
+section#about-me .about {
+  width: 60%;
+  float: right;
+    margin-bottom: 80px;
+}
+
+section#about-me .about h1, section#about-me .about p, section#about-me .about h2, section#about-me .about ul {
+  width: 95%;
+  padding: 0 5% 0 0;
+  float: right;
+  margin-bottom: 0;
+}
+
+section#about-me .about h1 {
+  font-size: 36px;
+  font-family: 'Quicksand', sans-serif;
+  color: #222;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding-top: 80px;
+    margin: 0;
+}
+
+section#about-me .about p {
+  color: #333333;
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 40px;
+}
+
+section#about-me .about h2 {
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif;
+  color: #222;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 60px;
+  float: left;
+  width: 200px;
+  padding: 0 0 0 0;
+}
+
+section#about-me .about ul {
+  margin-top: 60px;
+  width: 430px;
+  padding: 0;
+  float: left;
+}
+
+section#about-me .about ul li {
+  display: inline;
+}
+
+section#about-me .about ul li a { 
+  font-size: 16px;
+  font-family: Quicksand;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 10px;
+  letter-spacing: 3px;
+  color: #666;
+  margin: 0 12px;
+
+  -webkit-transition: all 0.2s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+   -moz-transition: all 0.2s ease-out;  /* Firefox 4-15 */
+     -o-transition: all 0.2s ease-out;  /* Opera 10.50–12.00 */
+        transition: all 0.2s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+section#about-me .about ul li .twitter:hover {background: #55acee; color: #fff; border-radius: 4px;}
+section#about-me .about ul li .dribbble:hover {background: #ea4c89; color: #fff; border-radius: 4px;}
+section#about-me .about ul li .instagram:hover {background: #55acee; color: #fff; border-radius: 4px;}
+section#about-me .about ul li .behance:hover {background: #1769ff; color: #fff; border-radius: 4px;}
+
+
+/*--- Get Started Styles ---*/
+
+section#get-started {
+  background: #111 url('../images/get-started.png') no-repeat center center;
+  background-size: cover; 
+  height: 224px;
+  float: left;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 160px 0;
+}
+
+section#get-started h3 {
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;  
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0 0 40px 0;
+}
+
+section#get-started p {
+  font-size: 18px;
+    width: 40%;
+    margin: 0 auto;
+}
+
+section#get-started button {
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    background: transparent;
+    border: none;
+    height: 53px;
+    margin: 45px 0 0;
+    padding: 0;
+}
+
+section#get-started button a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 15px 100px;
+  border: 3px solid #fff;
+  -webkit-transition: all 0.2s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+   -moz-transition: all 0.2s ease-out;  /* Firefox 4-15 */
+     -o-transition: all 0.2s ease-out;  /* Opera 10.50–12.00 */
+        transition: all 0.2s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */  
+}
+
+section#get-started button:hover a, section#get-started button:focus a  {
+  border: 3px solid #24a89a;
+  background: #24a89a;
+  color: #fff;
+}
+
+section#get-started button:active a {
+  border: 3px solid #1c887c;
+  background: #1c887c;
+  color: #fff;
+}
+
+footer {
+  float: left;
+  background: rgb(20,20,20);
+  width: 90%;
+  padding: 0 5%;
+  height: auto;
+}
+
+footer h1 {
+  font-family: 'Quicksand', sans-serif;
+  float: left;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  width: auto;
+  margin: 20px 0 13px;
+}
+
+footer h1 a {
+  color: #333;
+  text-decoration: none;
+
+  -webkit-transition: color 0.2s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: color 0.2s ease-out;  /* Firefox 4-15 */
+       -o-transition: color 0.2s ease-out;  /* Opera 10.50–12.00 */
+          transition: color 0.2s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+footer  p {
+  float: right;
+  width: 60%;
+  color: #333;
+  margin: 34px 0;
+  text-align: right;
+}
+
+footer .logo img {
+    width: 70%;
+}
+
+section#portfol section#about-me {
+  background: #a3a3a2;
+  height: auto;
+  float: left;
+  position: relative;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px)
+{ 
+    header.clear {
+        background: rgba(20,20,20,1)
+    }
+    header {
+        padding: 0;
+        height: 100px;   
+        top:0;
+    }
+    
+    header h1 {
+        margin: 14px 0 0;
+    }
+    
+    header nav {
+        visibility: hidden;
+        display: none;
+    }
+    
+    header .navTrigger {
+        visibility: visible;
+        display: block;
+    }
+    
+    header .mobileNav {
+        visibility: visible;
+        display: none;
+        opacity: 1;
+    }
+    
+    header.scrolled .mobileNav a:hover,
+    header.clear .mobileNav a:hover,
+    header.mobileNav a:hover {
+        border-bottom: 2px solid transparent;
+    }
+    
+    section#feature {
+        display: none;
+    }
+    
+    section#portfolio {
+        position: relative;
+        margin-top: 100px;
+    }
+    
+    section#portfolio article {
+        width: 100%;
+    }
+    
+    section#about-me .about {
+        width: 100%;
+        float: left;
+    }
+    
+    section#about-me .about h1,
+    section#about-me .about p,
+    section#about-me .about h2,
+    section#about-me .about ul {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+    }
+    
+    section#about-me .about h2 {
+        width: 45%;
+        float: right;
+        font-size: 26px;
+    }
+    
+    section#about-me .about ul {
+        width: 45%;
+        float: right;
+    }
+    
+    section#about-me .about ul li {
+        display: block;
+    }
+    
+    section#about-me .about ul li a {
+        font-size: 20px;
+        padding: 21px 10px;
+        color: #fff;
+        margin: 0 0 30px;
+        float: left;
+        width: 93%;
+        text-align: center;
+    }
+
+    section#about-me .about ul li .twitter {background: #55acee; border-radius: 4px;}
+    section#about-me .about ul li .dribbble {background: #ea4c89; border-radius: 4px;}
+    section#about-me .about ul li .instagram {background: #55acee; border-radius: 4px;}
+    section#about-me .about ul li .behance {background: #1769ff; border-radius: 4px;}
+    
+    section#about-me img {
+        width: 40%;
+    }
+    
+    section#get-started {
+        padding: 80px 0;
+        height: auto;
+    }
+    
+    section#get-started p {
+        width: 90%;
+        font-size: 20px;
+    }
+    
+    section#get-started button {
+        height: 61px;
+        width: 100%;
+    }
+    
+    section#get-started button a {
+        padding: 19px 0;
+        width: 90%;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+    } 
+}
